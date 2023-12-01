@@ -1,20 +1,6 @@
-locals {
-  ami               = "ami-065deacbcaac64cf2"
-  instance_type     = "t2.micro"
-  name_tag          = "My EC2 Instance2"
-  allocated_storage = 20
-  storage_type      = "gp2"
-  engine            = "mysql"
-  engine_version    = "5.7"
-  instance_class    = "db.t2.micro"
-  db_name           = "mydatabase"
-  username          = "myusername"
-  password          = "mypassword"
-}
-
 variable "ami" {
-  description = "Ubuntu AMI ID in N. Virginia Region"
-  default     = "ami-065deacbcaac64cf2"
+  description = "Amazon Linux 2023 AMI"
+  default     = "ami-0669b163befffbdfc"
 }
 
 variable "instance_type" {
@@ -25,9 +11,46 @@ variable "instance_type" {
 variable "name_tag" {
   type        = string
   description = "Name of the EC2 instance"
-  default     = "My EC2 Instance"
+  default     = "EC2 Instance"
 }
 
 variable "allocated_storage" {
+  description = "allocated storage in GBs"
+  default     = 20
+}
 
+variable "storage_type" {
+  description = "Type of storage for DB"
+  default     = "gp2"
+}
+
+variable "engine" {
+  description = "Type of database required"
+  default     = "mysql"
+}
+variable "engine_version" {
+  description = "RDS engine version to use"
+  default     = "5.7"
+}
+variable "instance_class" {
+  description = "Instance class value"
+  default     = "db.t2.micro"
+}
+variable "db_name" {
+  description = "Name of database"
+  default     = "mysqldatabase"
+}
+variable "db_user" {
+  type        = string
+  description = "username for DB user."
+  default     = "bXlzcWx1c2Vy"
+}
+variable "db_pwd" {
+  description = "password for DB user"
+  default     = "bXlzcWxwYXNzd29yZA=="
+}
+variable "multi_az" {
+  type        = bool
+  description = "Enable multi-az"
+  default     = null
 }
