@@ -2,6 +2,7 @@
 resource "aws_instance" "myEC2" {
   ami           = var.ami
   instance_type = var.instance_type
+  key_name      = "app-ssh-key"
 
   tags = {
     Name = var.name_tag,
