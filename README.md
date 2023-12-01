@@ -1,6 +1,7 @@
 # NiazTask
 
 Task for CyberDuck
+
 This repository contains terraform code that will spin up ec2 instance using a linux ami on AWS.
 It also creates a mySql database using RDS which is highly available and resilient.
 
