@@ -27,3 +27,14 @@ Outputs in the terminal will show you details of what has been created.
 Verify this by checking on the AWS console.
 
 Finally you can run 'terraform destroy' to delete all resources created.
+
+### Automation
+I have automated this whole script to use Github Actions. You can view runs by clicking on Actions tab on the repo.
+
+https://github.com/Niazz/NiazTask/actions
+
+I have also integrated this with Terraform Cloud to view runs and logs.
+
+https://app.terraform.io/app/niazOrg/workspaces/niaz
+
+This can be ran locally however you may need to update AWS credentials.
