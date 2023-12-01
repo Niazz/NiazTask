@@ -1,6 +1,6 @@
 # NiazTask
 
-### Task for CyberDuck
+### Task for Cyber-Duck
 
 This repository contains terraform code that will spin up ec2 instance using a linux ami on AWS.
 
